@@ -16,6 +16,8 @@ chmod 700 ~/.ssh
 ssh-keygen -t rsa
 cp -prv ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
 
+ssh-keygen -t rsa -f ~/.ssh/id_rsa -N ""
+
 touch ~/.ssh/config
 chmod 600 ~/.ssh/config
 
