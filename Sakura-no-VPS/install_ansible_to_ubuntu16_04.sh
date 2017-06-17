@@ -14,9 +14,9 @@ sudo sed -i "s/ ALL$/ NOPASSWD:ALL/g" /etc/sudoers
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 ssh-keygen -t rsa
-cp -prv ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
 
 ssh-keygen -t rsa -f ~/.ssh/id_rsa -N ""
+cp -prv ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
 
 touch ~/.ssh/config
 chmod 600 ~/.ssh/config
