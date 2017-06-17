@@ -58,3 +58,9 @@ cat <<_EOL > ~/upgrade.yml
 _EOL
 
 ansible-playbook -k ~/upgrade.yml
+
+echo '--- your SSH secret key ---'
+cat ~/.ssh/id_rsa
+echo '--- your SSH secret key ---'
+
+exit
