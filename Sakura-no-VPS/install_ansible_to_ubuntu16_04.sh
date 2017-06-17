@@ -1,4 +1,10 @@
 #!/bin/sh
+# How to use
+# ---
+# <New Incetance>
+# SAKURA Internet [Virtual Private Server SERVICE]
+# $ wget -O - 'https://raw.githubusercontent.com/kmikage/nkjg-like-first-setup/master/Sakura-no-VPS/install_ansible_to_ubuntu16_04.sh' | /bin/sh
+
 sudo sed -i "s/^PermitRootLogin .*$/PermitRootLogin no/g" /etc/ssh/sshd_config
 sudo sed -i "s/^PasswordAuthentication .*$/PasswordAuthentication no/g" /etc/ssh/sshd_config
 sudo systemctl reload sshd  
