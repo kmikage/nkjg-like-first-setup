@@ -10,8 +10,6 @@ chmod 700 ~/.ssh
 ssh-keygen -t rsa
 cp -prv ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
 
-cat ~/.ssh/id_rsa
-
 touch ~/.ssh/config
 chmod 600 ~/.ssh/config
 
@@ -45,11 +43,11 @@ cat <<_EOL > ~/upgrade.yml
 ---
 - hosts: localhost
   user: ubuntu
+  become: yes
   tasks:
     - name: "upgrade"
       apt: 
         upgrade: dist
-      sudo: yes
 
 _EOL
 
